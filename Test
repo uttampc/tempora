@@ -1,1 +1,10 @@
 Test
+
+$ find /media/upawar/MainDrive5T/upawar/Pictures/ -type d \( -name "Masters" -o -name "originals" -o -name "masters" \) -exec find {} -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.mov" -o -iname "*.mp4" -o -iname "*.heic"  -o -iname "*.dng" -o -iname "*.cr2" \) \; | wc -l                                                                                                                                                                                                                      
+34132
+$ find /media/upawar/MainDrive5T/bharatis-iphone-photos/ -type d \( -name "Masters" -o -name "originals" -o -name "masters" \) -exec find {} -type f \; | wc -l
+24766
+$ find /media/upawar/Seagate4TB/imac-backup/Pictures/ -type d \( -name "Masters" -o -name "originals" -o -name "masters" \) -exec find {}  -type f  \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.mov" -o -iname "*.mp4" -o -iname "*.heic" -o -iname "*.dng" -o -iname "*.cr2" \) \; | wc -l                                                                     
+27915
+$ find /media/upawar/Seagate4TB/photos_from_usb_to_import/ -maxdepth 3 -type f -not -path "*Thumbnails*" -not -path "*proxies*" \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.mov" -o -iname "*.mp4" -o -iname "*.heic" -o -iname "*.dng" -o -iname "*.cr2" \) | wc -l    
+1471
