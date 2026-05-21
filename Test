@@ -1,10 +1,57 @@
 Test
 
-$ find /media/upawar/MainDrive5T/upawar/Pictures/ -type d \( -name "Masters" -o -name "originals" -o -name "masters" \) -exec find {} -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.mov" -o -iname "*.mp4" -o -iname "*.heic"  -o -iname "*.dng" -o -iname "*.cr2" \) \; | wc -l                                                                                                                                                                                                                      
-34132
-$ find /media/upawar/MainDrive5T/bharatis-iphone-photos/ -type d \( -name "Masters" -o -name "originals" -o -name "masters" \) -exec find {} -type f \; | wc -l
-24766
-$ find /media/upawar/Seagate4TB/imac-backup/Pictures/ -type d \( -name "Masters" -o -name "originals" -o -name "masters" \) -exec find {}  -type f  \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.mov" -o -iname "*.mp4" -o -iname "*.heic" -o -iname "*.dng" -o -iname "*.cr2" \) \; | wc -l                                                                     
-27915
-$ find /media/upawar/Seagate4TB/photos_from_usb_to_import/ -maxdepth 3 -type f -not -path "*Thumbnails*" -not -path "*proxies*" \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.mov" -o -iname "*.mp4" -o -iname "*.heic" -o -iname "*.dng" -o -iname "*.cr2" \) | wc -l    
-1471
+From /media/upawar/MainDrive5T/upawar/Pictures/ and /media/upawar/MainDrive5T/bharatis-iphone-photos/ and comparing only Master/originals/Originals/ in photos library rmlint foind 1713 duplicates.
+
+$ tail -n 50 rmlint-run.log 
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2092_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2095.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2095_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2085.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2085_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2064.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2064_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2079.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2079_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2098.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2098_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2086.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2086_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2068.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2068_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2076.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2076_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2042.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2042_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2045.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2045_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2067.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130403/IMG_2067_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2050.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2050_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2040.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2040_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-140907/IMG_2100.jpg'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-140901/IMG_2100_1.jpg'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-140831/IMG_2093.jpg'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-140844/IMG_2093_1.jpg'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2044.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2044_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2041.JPG'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-020544/IMG_2041_1.JPG'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_2072.AVI'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_2072_1.AVI'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0050.MOV'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0050_1.MOV'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/VID00001.MP4'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-132601/VID00001.MP4'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_2070.AVI'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_2070_1.AVI'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0016.MOV'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0016_1.MOV'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0068.MOV'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0068_1.MOV'
+    ls '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0130.MOV'
+    rm '/media/upawar/MainDrive5T/upawar/Pictures/Pictures/Photos Library.photoslibrary/Masters/2015/12/28/20151228-130721/MVI_0130_1.MOV'
+
+
+What is the next step?
