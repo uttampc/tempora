@@ -1,20 +1,25 @@
-$ du -sh /media/upawar/Seagate4TB/*/
-315G    /media/upawar/Seagate4TB/duplicates/
-17G     /media/upawar/Seagate4TB/FOUND.000/
-68G     /media/upawar/Seagate4TB/FromiCloud/
-36G     /media/upawar/Seagate4TB/iCloud Photos/
-du: cannot access '/media/upawar/Seagate4TB/imac-backup/LinuxOniMac/Desktop/Organized memories/2018/Tabala ...': No such file or directory
-966G    /media/upawar/Seagate4TB/imac-backup/
-1.0M    /media/upawar/Seagate4TB/JVM/
-100G    /media/upawar/Seagate4TB/mini-pc-tigerlake/
-5.6G    /media/upawar/Seagate4TB/Movies/
-1.7G    /media/upawar/Seagate4TB/Music/
-10G     /media/upawar/Seagate4TB/music-duplicates/
-7.5G    /media/upawar/Seagate4TB/My movies/
-43G     /media/upawar/Seagate4TB/old-macbook-pro/
-25G     /media/upawar/Seagate4TB/pawar-next-cloud/
-876G    /media/upawar/Seagate4TB/photos_from_usb_to_import/
-51G     /media/upawar/Seagate4TB/Pictures/
-45G     /media/upawar/Seagate4TB/z-documents-gathering-place/
-93G     /media/upawar/Seagate4TB/z-photos-images-gathering-place/
+$ du -sh /media/upawar/Seagate4TB/imac-backup/*/
+440M    /media/upawar/Seagate4TB/imac-backup/Documents/
+13M     /media/upawar/Seagate4TB/imac-backup/Downloads/
+256K    /media/upawar/Seagate4TB/imac-backup/family/
+22M     /media/upawar/Seagate4TB/imac-backup/github/
+2.0M    /media/upawar/Seagate4TB/imac-backup/intel talk/
+553M    /media/upawar/Seagate4TB/imac-backup/JVM/
+159M    /media/upawar/Seagate4TB/imac-backup/Music/
+6.5M    /media/upawar/Seagate4TB/imac-backup/Pawar Design/
+955G    /media/upawar/Seagate4TB/imac-backup/Pictures/
+7.3G    /media/upawar/Seagate4TB/imac-backup/projects/
+du: cannot access '/media/upawar/Seagate4TB/imac-backup/unreadable/Tabala ...': No such file or directory
+256K    /media/upawar/Seagate4TB/imac-backup/unreadable/
+2.4G    /media/upawar/Seagate4TB/imac-backup/Videos/
 
+$ du -sh /media/upawar/MainDrive5T/*/
+54G     /media/upawar/MainDrive5T/bharatis-iphone-photos/
+764M    /media/upawar/MainDrive5T/Documents/
+4.0M    /media/upawar/MainDrive5T/Downloads/
+439M    /media/upawar/MainDrive5T/git-backup/
+512K    /media/upawar/MainDrive5T/iphone-backups/
+91G     /media/upawar/MainDrive5T/mac-backups/
+4.0G    /media/upawar/MainDrive5T/Music/
+1.5M    /media/upawar/MainDrive5T/Pictures/
+1014G   /media/upawar/MainDrive5T/upawar/
