@@ -1,7 +1,6 @@
-await setMeta('wakeLockEducationShown', false);
-undefined
-[Audio] Context unlocked beep.js:45:13
-[Education DEBUG] modal object: 
-<div class="modal-overlay" data-modal-id="modal-1">
-player.js:762:13
-[Education DEBUG] modal.onClose exists? undefined player.js:763:13
+ grep -n "export function\|export const\|return " src/components/modal.js 
+28:export function openModal({ title, content, onClose, dismissable = true }) {
+81:  return modal;
+87:export function closeModal(modal) {
+119:  if (str == null) return '';
+120:  return String(str)
