@@ -1,14 +1,12 @@
-$ grep -n "edit-exercise\|remove-exercise\|data-action" src/views/routineEdit.js 
-231:          <button type="button" class="btn-icon-only" data-action="edit" data-exercise-id="${escapeHtml(ex.id)}" aria-label="Edit exercise">✎</button>
-232:          <button type="button" class="btn-icon-only btn-icon-danger" data-action="remove" data-exercise-id="${escapeHtml(ex.id)}" aria-label="Remove exercise">✕</button>
-253:          <button type="button" class="btn-icon-only" data-action="edit-exercise" data-exercise-id="${escapeHtml(ex.id)}" aria-label="Edit">
-256:          <button type="button" class="btn-icon-only btn-icon-danger" data-action="remove-exercise" data-exercise-id="${escapeHtml(ex.id)}" aria-label="Remove">
-269:    exercisesContainer.querySelectorAll('[data-action="remove"]').forEach((btn) => {
-272:    exercisesContainer.querySelectorAll('[data-action="edit"]').forEach((btn) => {
-
-> document.querySelectorAll('[data-action="edit-exercise"]').forEach((b, i) => { console.log(i, b, 'click handlers:', getEventListeners?.(b)); });
-VM12924:1 0 <button type=​"button" class=​"btn-icon-only" data-action=​"edit-exercise" data-exercise-id=​"mq0mtqvm-dm1d" aria-label=​"Edit">​ ✎ ​</button>​flex 'click handlers:' {}[[Prototype]]: Object
-VM12924:1 1 <button type=​"button" class=​"btn-icon-only" data-action=​"edit-exercise" data-exercise-id=​"mq0mtqvm-b76g" aria-label=​"Edit">​ ✎ ​</button>​flex 'click handlers:' {}
-VM12924:1 2 <button type=​"button" class=​"btn-icon-only" data-action=​"edit-exercise" data-exercise-id=​"mq0mtqvm-gwsb" aria-label=​"Edit">​ ✎ ​</button>​flex 'click handlers:' {}
-VM12924:1 3 <button type=​"button" class=​"btn-icon-only" data-action=​"edit-exercise" data-exercise-id=​"mq0mtqvm-tqwm" aria-label=​"Edit">​ ✎ ​</button>​flex 'click handlers:' {}
-VM12924:1 4 <button type=​"button" class=​"btn-icon-only" data-action=​"edit-exercise" data-exercise-id=​"mq0mtqvm-kedd" aria-label=​"Edit">​ ✎ ​</button>​flex 'click handlers:' {}
+ grep -n "export async function" store.js |grep -i session
+207:export async function startSession(routineId) {
+220:export async function completeSession(sessionId, completedExerciseIds = []) {
+231:export async function getSessionsForRoutine(routineId) {
+237:export async function getLastCompletedSession(routineId) {
+521:export async function createSession({ routineId, routineTitle, totalExercises, totalSets }) {
+543:export async function updateSession(id, updates) {
+555:export async function deleteSession(id) {
+563:export async function getAllSessions() {
+572:export async function getSession(id) {
+581:export async function getSessionsByStatus(status) {
+589:export async function getSessionsByRoutine(routineId) {
