@@ -1,6 +1,12 @@
-$ grep -n "_emit" core/sessionEngine.js 
-174:  _emit(event, data) {
-210:    this._emit('tick', this.getState());
-298:    this._emit('phaseChange', {
-313:    this._emit('phaseChange', {
-319:    this._emit('complete', {
+174   _emit(event, data) {
+175     if (this._listeners[event]) {
+176       this._listeners[event].forEach((cb) => {
+177         try {
+178           cb(data);
+179         } catch (err) {
+180           console.error(`[SessionEngine] Listener for "${event}" threw:`, err);
+181         }
+182       });
+183     }
+184   }
+
