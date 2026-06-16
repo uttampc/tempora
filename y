@@ -1,37 +1,33 @@
-  const unsubPhase = engine.on('phaseChange', (data) => {
-    if (data.to === 'complete') return;  // handled by 'complete' event
-    
-    // Track session progress; every transition AWAY from 'work' means a set was
-    // completed. 
-    if (data.from === 'work' && activeSession) {
-      activeSession.setsCompleted += 1;
-      // If we just left work AND are starting a non-set rest, that means execise was completed
-      if (data.to === 'rest-exercise') {
-        activeSession.exercisesCompleted += 1;
-      }
-    } 
-      
-    // --- Save resume state on every phase transition ---
-    if (activeSession && activeRoutine) {
-      const state = data.state;
-      const exercise = state.currentExercise;
-      updateSession(activeSession.id, {
-        totalElapsed: state.totalElapsed,
-        setsCompleted: activeSession.setsCompleted,
-        exercisesCompleted: activeSession.exercisesCompleted,
-        lastExerciseId: exercise ? exercise.id : null,
-        lastExerciseName: exercise ? exercise.name : null,
-        lastExerciseIndex: state.currentExerciseIndex,
-        lastSet: state.currentSet,
-        lastPhase: data.to,
-        lastTimeRemaining: Math.max(1, Math.ceil(state.timeRemaining)),
-        lastSavedAt: Date.now(),
-      }).catch(err => console.warn('[Player] Could not save resume state:', err));
-    } 
-      
-    // Fire phase-start cue
-    const context = buildCueContext(data, routine);
-    cues.cuePhaseStart(data.to, context);
+146:function renderExerciseList(exercises) {
+147-  return `
+148-    <section class="exercise-detail-list">
+149-      <h3 class="section-heading">Exercises</h3>
+150-      ${exercises.map((ex, i) => renderExerciseItem(ex, i + 1)).join('')}
+151-    </section>
+152-  `;
+153-}
 
-    renderPlayerUI(container, routine, data.state);
-  });
+155:function renderExerciseItem(exercise, position) {
+156-  const video = parseVideoUrl(exercise.videoUrl);
+157-  const videoLink = video
+158-    ? `<a href="${escapeHtml(video.originalUrl)}" target="_blank" rel="noopener noreferrer" class="video-link">▶ Watch demonstration</a>`
+159-    : '';
+160-
+161-  const restNote = exercise.sets > 1 && exercise.restBetweenSets > 0
+162-    ? ` · ${exercise.restBetweenSets}s rest`
+163-    : '';
+164-
+165-  return `
+166-    <article class="exercise-detail-item">
+167-      <div class="exercise-position">${position}</div>
+168-      <div class="exercise-detail-main">
+169-        <h4 class="exercise-detail-name">${escapeHtml(exercise.name)}</h4>
+170-        ${exercise.description ? `<p class="exercise-detail-desc">${escapeHtml(exercise.description)}</p>` : ''}
+171-        <p class="exercise-detail-meta">
+172-          ${exercise.workDuration}s hold × ${exercise.sets} set${exercise.sets === 1 ? '' : 's'}${restNote}
+173-        </p>
+174-        ${videoLink}
+175-      </div>
+176-    </article>
+177-  `;
+178-}
