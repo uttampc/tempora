@@ -1,3 +1,34 @@
+Uncaught (in promise) ChunkLoadError: Failed to load chunk /_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1xch-cm._.js from module [turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)
+    NextJS 25
+        entry
+        promise callback*loadChunkByUrlInternal
+        loadChunkPath
+        loadChunkInternal
+        loadChunk
+        <anonymous>
+        <anonymous>
+        asyncLoader
+        createProcessTurbopackMessage
+        createWebSocket
+        hydrate
+        <anonymous>
+        appBootstrap
+        loadScriptsInSequence
+        appBootstrap
+        <anonymous>
+        instantiateModuleShared
+        runModuleExecutionHooks
+        instantiateModuleShared
+        instantiateModule
+        getOrInstantiateRuntimeModule
+        registerChunk
+        registerChunk
+        <anonymous>
+        <anonymous>
+
+
+
+
 $ npm install prisma @prisma/client
 
 added 129 packages, removed 5 packages, and audited 487 packages in 21s
