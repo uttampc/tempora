@@ -1,3 +1,5 @@
+Failed to load ‘http://localhost:3000/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js’. A ServiceWorker intercepted the request and encountered an unexpected error.
+
 Uncaught (in promise) ChunkLoadError: Failed to load chunk /_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1xch-cm._.js from module [turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)
     NextJS 25
         entry
