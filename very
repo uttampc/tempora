@@ -1,27 +1,19 @@
-✓ Ready in 97ms
 [CCB] Starting search for: 107970
 [CCB] GET status: 200
-[CCB] ViewState found: true
+[CCB] Cookies received: 1 ASP.NET_SessionId=vnflgfey5kwyc2djihwukwjz
+[CCB] ViewState found: true length: 280
 [CCB] EventValidation found: true
 [CCB] POST status: 200
-[CCB] Response length: 9178
-[CCB] Response snippet: 
-
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head><meta charset="utf-8" /><title>
-        State of Oregon: Construction Contractors Board - Search
-</title><link href="global.css" rel="stylesheet" type="text/css" />
-    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
-</head>
-<body>
-    <form method="post" action="./default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTgyNTYxOTMzMA9kFgJmD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgMPZBYCZg9kFggCAQ8PFgIeC05hdmlnYXRlVXJsBQ9vY2xzX3NlYXJjaC5hc3BkZAIDDw8WAh8ABQ9sYnBfc2VhcmNoLmFzcHhkZAIFDw8WAh8ABRBvY2hpX3NlYXJjaC5hc3B4ZGQCBw8PFgIfAAUScHdib25kX3NlYXJjaC5hc3B4ZGRkhw8w8srgDQ3iZPr1oByOklJZrIzPklMq6O2R5TvLHfU=" />
-</div>
-
-<script type
-[CCB] Count label text: ""
-[CCB] No results found (count=0 or missing)
+[CCB] Response length: 7423
+[CCB] Contains GridView: true
+[CCB] Contains CountLabel: true
+[CCB] Count label text: "1"
+[CCB] Table found: true
+[CCB] Cells found: 4
+[CCB] Parsed result: {
+  found: true,
+  licenseNumber: '107970',
+  name: 'DAVES GARAGE DOORS INC',
+  status: 'Active',
+  address: '6195 SW 112TH AVE BEAVERTON OR 97008'
+}
