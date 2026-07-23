@@ -1,19 +1,11 @@
-[CCB] Starting search for: 107970
+[CCB] Starting search for: LIC-55555
 [CCB] GET status: 200
-[CCB] Cookies received: 1 ASP.NET_SessionId=vnflgfey5kwyc2djihwukwjz
+[CCB] Cookies received: 1 ASP.NET_SessionId=gpip2x1sts0ii2x2iksnmxgk
 [CCB] ViewState found: true length: 280
 [CCB] EventValidation found: true
 [CCB] POST status: 200
-[CCB] Response length: 7423
+[CCB] Response length: 6705
 [CCB] Contains GridView: true
 [CCB] Contains CountLabel: true
-[CCB] Count label text: "1"
-[CCB] Table found: true
-[CCB] Cells found: 4
-[CCB] Parsed result: {
-  found: true,
-  licenseNumber: '107970',
-  name: 'DAVES GARAGE DOORS INC',
-  status: 'Active',
-  address: '6195 SW 112TH AVE BEAVERTON OR 97008'
-}
+[CCB] Count label text: "0"
+[CCB] No results found
