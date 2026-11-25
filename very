@@ -1,11 +1,4 @@
-[CCB] Starting search for: LIC-55555
-[CCB] GET status: 200
-[CCB] Cookies received: 1 ASP.NET_SessionId=gpip2x1sts0ii2x2iksnmxgk
-[CCB] ViewState found: true length: 280
-[CCB] EventValidation found: true
-[CCB] POST status: 200
-[CCB] Response length: 6705
-[CCB] Contains GridView: true
-[CCB] Contains CountLabel: true
-[CCB] Count label text: "0"
-[CCB] No results found
+sudo docker compose ps -a
+NAME                  IMAGE                  COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+leafnote-leafnote-1   leafnote-local:1.4.1   "caddy run --config …"   leafnote   9 minutes ago   Up 8 minutes (healthy)   80/tcp, 443/tcp, 2019/tcp, 443/udp, 192.168.1.100:8443->8443/tcp
+leafnote-sync-1       leafnote-sync:1.4.1    "docker-entrypoint.s…"   sync       9 minutes ago   Up 9 minutes (healthy)   3000/tcp
