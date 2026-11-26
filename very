@@ -1,14 +1,26 @@
-$ curl -vk --connect-timeout 5 --max-time 15 https://192.168.1.100:8443/ -o /dev/null
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 192.168.1.100:8443...
-* ALPN: curl offers h2,http/1.1
-} [5 bytes data]
-* TLSv1.3 (OUT), TLS handshake, Client hello (1):
-} [1546 bytes data]
-* TLSv1.3 (IN), TLS alert, internal error (592):
-{ [2 bytes data]
-* TLS connect error: error:0A000438:SSL routines::tlsv1 alert internal error
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-* closing connection #0
-curl: (35) TLS connect error: error:0A000438:SSL routines::tlsv1 alert internal error
+$ sudo docker compose logs --tail=100 leafnote sync
+sync-1  | Leafnote sync API ready. Connection codes are never written to logs.
+leafnote-1  | {"level":"info","ts":1795650149.8110716,"msg":"maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined"}
+leafnote-1  | {"level":"info","ts":1795650149.8110843,"msg":"GOMEMLIMIT is updated","GOMEMLIMIT":60045115392,"previous":9223372036854775807}
+leafnote-1  | {"level":"info","ts":1795650149.8110876,"msg":"using config from file","file":"/etc/caddy/Caddyfile"}
+leafnote-1  | {"level":"info","ts":1795650149.8110898,"msg":"adapted config to JSON","adapter":"caddyfile"}
+leafnote-1  | {"level":"warn","ts":1795650149.8110921,"logger":"admin","msg":"admin endpoint disabled"}
+leafnote-1  | {"level":"info","ts":1795650149.8112268,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x91f3718dc00"}
+leafnote-1  | {"level":"info","ts":1795650149.8180077,"logger":"http.auto_https","msg":"automatic HTTP->HTTPS redirects are disabled","server_name":"srv1"}
+leafnote-1  | {"level":"info","ts":1795650149.818227,"logger":"pki.ca.local","msg":"root certificate trust store installation disabled; unconfigured clients may show warnings","path":"storage:pki/authorities/local/root.crt"}
+leafnote-1  | {"level":"warn","ts":1795650149.8184068,"logger":"http","msg":"HTTP/2 skipped because it requires TLS","network":"tcp","addr":":8080"}
+leafnote-1  | {"level":"warn","ts":1795650149.8184128,"logger":"http","msg":"HTTP/3 skipped because it requires TLS","network":"tcp","addr":":8080"}
+leafnote-1  | {"level":"info","ts":1795650149.818415,"logger":"http.log","msg":"server running","name":"srv0","protocols":["h1","h2","h3"]}
+leafnote-1  | {"level":"info","ts":1795650149.8184364,"logger":"http","msg":"enabling HTTP/3 listener","addr":":8443"}
+leafnote-1  | {"level":"info","ts":1795650149.818484,"msg":"failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details."}
+leafnote-1  | {"level":"info","ts":1795650149.8185215,"logger":"http.log","msg":"server running","name":"srv1","protocols":["h1","h2","h3"]}
+leafnote-1  | {"level":"info","ts":1795650149.8185256,"logger":"http","msg":"enabling automatic TLS certificate management","domains":["192.168.1.100"]}
+leafnote-1  | {"level":"info","ts":1795650149.8185823,"msg":"autosaved config (load with --resume flag)","file":"/config/caddy/autosave.json"}
+leafnote-1  | {"level":"info","ts":1795650149.8185897,"msg":"serving initial configuration"}
+leafnote-1  | {"level":"info","ts":1795650149.819759,"logger":"tls.obtain","msg":"acquiring lock","identifier":"192.168.1.100"}
+leafnote-1  | {"level":"info","ts":1795650149.8206654,"logger":"tls","msg":"cleaning storage unit","storage":"FileStorage:/data/caddy"}
+leafnote-1  | {"level":"info","ts":1795650149.8215165,"logger":"tls.obtain","msg":"lock acquired","identifier":"192.168.1.100"}
+leafnote-1  | {"level":"info","ts":1795650149.8215518,"logger":"tls.obtain","msg":"obtaining certificate","identifier":"192.168.1.100"}
+leafnote-1  | {"level":"info","ts":1795650149.822651,"logger":"tls","msg":"finished cleaning storage units"}
+leafnote-1  | {"level":"info","ts":1795650149.8369305,"logger":"tls.obtain","msg":"certificate obtained successfully","identifier":"192.168.1.100","issuer":"local"}
+leafnote-1  | {"level":"info","ts":1795650149.8370385,"logger":"tls.obtain","msg":"releasing lock","identifier":"192.168.1.100"}
